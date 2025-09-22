@@ -3,6 +3,7 @@
     "description": "PHP пакет для обработки текстовых команд пользователя в CRM-системе",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "minimum-stability": "stable",
     "require": {
         "php": "^8.1",
