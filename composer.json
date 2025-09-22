@@ -1,0 +1,41 @@
+{
+    "name": "avangero/deal-cmd-package",
+    "description": "PHP пакет для обработки текстовых команд пользователя в CRM-системе",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1",
+        "psr/container": "^2.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7",
+        "laravel/pint": "^1.25",
+        "tightenco/duster": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Avangero\\DealCmdPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Avangero\\DealCmdPackage\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Avangero\\DealCmdPackage\\Infrastructure\\Laravel\\DealCmdServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse",
+        "phpcs": "phpcs src tests"
+    }
+}
